@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/droneGrabberRod.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 3.04119
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 2.11659
+height = 7.67704
+
+[node name="Grabber" type="RigidBody2D"]
+position = Vector2( -15.3536, 10.498 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0155611, 0.121143 )
+shape = SubResource( 2 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2( 0.154713, 42.6657 )
+node_a = NodePath("../S2")
+node_b = NodePath("../S1")
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="."]
+position = Vector2( -0.0416965, 27.978 )
+node_a = NodePath("../S2")
+node_b = NodePath("../S3")
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="."]
+position = Vector2( -0.0147266, 13.8204 )
+node_a = NodePath("../S3")
+node_b = NodePath("../S4")
+softness = 0.6
+
+[node name="S1" type="RigidBody2D" parent="."]
+position = Vector2( -0.159823, 49.9039 )
+
+[node name="droneGrabberRod" type="Sprite" parent="S1"]
+position = Vector2( -0.811558, 1.4908 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="S1"]
+position = Vector2( 0.092495, 0.0752602 )
+shape = SubResource( 1 )
+
+[node name="S2" type="RigidBody2D" parent="."]
+position = Vector2( 0.0890434, 34.759 )
+
+[node name="droneGrabberRod" type="Sprite" parent="S2"]
+position = Vector2( -1.00574, 1.30024 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="S2"]
+position = Vector2( -0.101688, 0.0250053 )
+shape = SubResource( 1 )
+
+[node name="S3" type="RigidBody2D" parent="."]
+position = Vector2( -0.00233674, 20.768 )
+
+[node name="droneGrabberRod" type="Sprite" parent="S3"]
+position = Vector2( -0.935587, 1.40798 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="S3"]
+position = Vector2( -0.0315342, -0.00756073 )
+shape = SubResource( 1 )
+
+[node name="S4" type="RigidBody2D" parent="."]
+position = Vector2( -0.230477, 6.54092 )
+
+[node name="droneGrabberRod" type="Sprite" parent="S4"]
+position = Vector2( -0.826511, 1.53459 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="S4"]
+position = Vector2( 0.0775414, 0.119053 )
+shape = SubResource( 1 )
