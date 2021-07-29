@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [display]
 
 window/size/resizable=false
-window/size/fullscreen=true
 window/size/always_on_top=true
 window/stretch/mode="viewport"
 
@@ -97,6 +96,7 @@ toggle_claw={
 [physics]
 
 common/enable_pause_aware_picking=true
+2d/default_linear_damp=0.5
 
 [rendering]
 
