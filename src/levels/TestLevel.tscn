@@ -209,7 +209,11 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 1/z_index = 0
 
 [node name="TestLevel" type="Node2D"]
+<<<<<<< HEAD
 position = Vector2( -251.755, 253.336 )
+=======
+position = Vector2( -35.3197, 29.9543 )
+>>>>>>> 51225f179bede179a717d3aba75a79934c716f13
 scale = Vector2( 1.01687, 1.00246 )
 script = ExtResource( 3 )
 
