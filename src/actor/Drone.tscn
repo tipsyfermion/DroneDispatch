@@ -6,61 +6,61 @@
 [ext_resource path="res://assets/Hook.png" type="Texture" id=4]
 [ext_resource path="res://src/actor/PickRegion.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.82331, 16.0135 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 1.76404 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 32, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=15]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ SubResource( 13 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "open",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 14 ) ],
+"frames": [ SubResource( 4 ) ],
 "loop": true,
 "name": "closed",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 11.764, 1.76403 )
-
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 32, 0, 32, 32 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 32, 32, 32 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
 region = Rect2( 32, 32, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 31, 9.93628 )
 
 [node name="Drone" type="KinematicBody2D"]
@@ -72,27 +72,9 @@ motorStrength = 71
 [node name="Chain" type="Node2D" parent="."]
 position = Vector2( 0.23597, -11.236 )
 
-<<<<<<< HEAD
 [node name="Rod3" type="RigidBody2D" parent="Chain"]
 position = Vector2( 0, 80 )
 gravity_scale = 10.0
-=======
-[node name="Box" parent="Chain/Node2D" instance=ExtResource( 6 )]
-position = Vector2( -0.10511, 0 )
-scale = Vector2( 1, 1 )
-
-[node name="Hook" type="RigidBody2D" parent="Chain/Node2D"]
-collision_layer = 2
-collision_mask = 28
-mass = 20.4082
-gravity_scale = 15.0
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Chain/Node2D/Hook"]
-position = Vector2( -0.373051, -11.5557 )
-scale = Vector2( 2.86525, 2.59641 )
-frames = SubResource( 3 )
-animation = "open"
->>>>>>> 51225f179bede179a717d3aba75a79934c716f13
 
 [node name="RodSprite" type="Sprite" parent="Chain/Rod3"]
 position = Vector2( -2, 3 )
@@ -100,28 +82,17 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="RodHitBox" type="CollisionShape2D" parent="Chain/Rod3"]
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="PinRod3Grabber" type="PinJoint2D" parent="Chain/Rod3"]
 position = Vector2( 0, 14 )
 node_a = NodePath("..")
-<<<<<<< HEAD
 node_b = NodePath("../../Hook/Grabber")
 disable_collision = false
 
 [node name="Rod1" type="RigidBody2D" parent="Chain"]
 position = Vector2( 0, 24 )
 gravity_scale = 10.0
-=======
-node_b = NodePath("../../Box")
-
-[node name="Link3" type="RigidBody2D" parent="Chain"]
-position = Vector2( 0.342966, 65.7072 )
-rotation = 0.00726741
-collision_layer = 2
-collision_mask = 28
-mass = 20.4082
->>>>>>> 51225f179bede179a717d3aba75a79934c716f13
 
 [node name="RodSprite" type="Sprite" parent="Chain/Rod1"]
 position = Vector2( -2, 3 )
@@ -129,7 +100,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="RodHitBox" type="CollisionShape2D" parent="Chain/Rod1"]
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="PinRod12" type="PinJoint2D" parent="Chain/Rod1"]
 position = Vector2( 0, 15 )
@@ -147,7 +118,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="RodHitBox" type="CollisionShape2D" parent="Chain/Rod2"]
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="PinRod23" type="PinJoint2D" parent="Chain/Rod2"]
 position = Vector2( 0, 13 )
@@ -165,18 +136,18 @@ contact_monitor = true
 
 [node name="PickRegion" type="CollisionShape2D" parent="Chain/Hook/Grabber"]
 position = Vector2( -0.23597, 9.23596 )
-shape = SubResource( 17 )
+shape = SubResource( 2 )
 disabled = true
 script = ExtResource( 5 )
 
 [node name="GrabberSprite" type="AnimatedSprite" parent="Chain/Hook/Grabber"]
 scale = Vector2( 2, 2 )
-frames = SubResource( 15 )
+frames = SubResource( 5 )
 animation = "open"
 
 [node name="GrabberHitBox" type="CollisionShape2D" parent="Chain/Hook/Grabber"]
 position = Vector2( 0, 2 )
-shape = SubResource( 16 )
+shape = SubResource( 6 )
 
 [node name="POCLeft" type="Position2D" parent="Chain/Hook/Grabber"]
 position = Vector2( -11.236, 9.23596 )
@@ -187,12 +158,12 @@ position = Vector2( 10.764, 9.23596 )
 [node name="DroneSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
-frames = SubResource( 10 )
+frames = SubResource( 11 )
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
 position = Vector2( 0.23597, -1.23597 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 0.23597, 125.574 )
