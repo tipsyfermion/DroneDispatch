@@ -136,7 +136,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 5/z_index = 0
 
 [node name="TestLevel" type="Node2D"]
-position = Vector2( -35.3197, 30.9543 )
+position = Vector2( -35.3197, 29.9543 )
 scale = Vector2( 1.01687, 1.00246 )
 
 [node name="TileMap" type="TileMap" parent="."]
