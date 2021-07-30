@@ -10,6 +10,7 @@ var pinL: PinJoint2D
 var pinR: PinJoint2D
 var object: RigidBody2D
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	drone = get_node("Drone")
