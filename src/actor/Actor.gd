@@ -4,7 +4,6 @@ class_name Actor
 
 var velocity: = Vector2.ZERO
 var acceleration: = Vector2.ZERO
-var gravity: = 1000
 
 export var g_modifier = 0.5
 

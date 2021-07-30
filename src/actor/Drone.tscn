@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/drone.png" type="Texture" id=1]
 [ext_resource path="res://src/actor/Drone.gd" type="Script" id=2]
@@ -62,6 +62,9 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 31, 9.93628 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 31, 10 )
 
 [node name="Drone" type="KinematicBody2D"]
 collision_mask = 28
@@ -159,6 +162,7 @@ position = Vector2( 10.764, 9.23596 )
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
 frames = SubResource( 11 )
+frame = 1
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
@@ -174,6 +178,14 @@ smoothing_enabled = true
 position = Vector2( 0.23597, -0.23597 )
 node_a = NodePath("..")
 node_b = NodePath("../Chain/Rod1")
+
+[node name="Damage Area" type="Area2D" parent="."]
+monitorable = false
+collision_mask = 28
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage Area"]
+position = Vector2( 0, -1 )
+shape = SubResource( 13 )
 
 [connection signal="body_shape_entered" from="Chain/Hook/Grabber" to="Chain/Hook/Grabber/PickRegion" method="_on_Grabber_body_shape_entered"]
 [connection signal="body_shape_exited" from="Chain/Hook/Grabber" to="Chain/Hook/Grabber/PickRegion" method="_on_Grabber_body_shape_exited"]
