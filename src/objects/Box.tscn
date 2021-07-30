@@ -6,6 +6,8 @@
 
 [node name="Box" type="RigidBody2D"]
 position = Vector2( 0.291741, 2.67874 )
+collision_layer = 8
+collision_mask = 31
 
 [node name="Box8" type="Sprite" parent="."]
 position = Vector2( -3.00008, 6.79418 )
