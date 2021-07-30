@@ -74,6 +74,8 @@ position = Vector2( 0.23597, -11.236 )
 
 [node name="Rod3" type="RigidBody2D" parent="Chain"]
 position = Vector2( 0, 80 )
+collision_layer = 2
+collision_mask = 28
 gravity_scale = 10.0
 
 [node name="RodSprite" type="Sprite" parent="Chain/Rod3"]
@@ -92,6 +94,8 @@ disable_collision = false
 
 [node name="Rod1" type="RigidBody2D" parent="Chain"]
 position = Vector2( 0, 24 )
+collision_layer = 2
+collision_mask = 28
 gravity_scale = 10.0
 
 [node name="RodSprite" type="Sprite" parent="Chain/Rod1"]
@@ -109,6 +113,8 @@ node_b = NodePath("../../Rod2")
 
 [node name="Rod2" type="RigidBody2D" parent="Chain"]
 position = Vector2( 0, 52 )
+collision_layer = 2
+collision_mask = 28
 gravity_scale = 10.0
 
 [node name="RodSprite" type="Sprite" parent="Chain/Rod2"]
@@ -130,6 +136,8 @@ position = Vector2( -0.23597, 109.236 )
 
 [node name="Grabber" type="RigidBody2D" parent="Chain/Hook"]
 position = Vector2( 0, -9 )
+collision_layer = 2
+collision_mask = 28
 gravity_scale = 10.0
 contacts_reported = 1
 contact_monitor = true
@@ -159,6 +167,7 @@ position = Vector2( 10.764, 9.23596 )
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
 frames = SubResource( 11 )
+frame = 1
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
