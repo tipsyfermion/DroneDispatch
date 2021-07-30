@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://assets/PSD/Tiles_sheet.png" type="Texture" id=1]
 [ext_resource path="res://src/actor/Drone.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/2 Background/scenery.png" type="Texture" id=7]
 [ext_resource path="res://assets/1 Tiles/mud.png" type="Texture" id=8]
 [ext_resource path="res://src/levels/InteractableEngine.gd" type="Script" id=9]
+[ext_resource path="res://src/ui/Interface.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -255,6 +256,11 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
+
+[node name="InterfaceLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Interface" parent="InterfaceLayer" instance=ExtResource( 10 )]
 
 [node name="scenery" type="Sprite" parent="."]
 position = Vector2( 1881, -404 )
