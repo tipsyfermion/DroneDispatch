@@ -2,16 +2,31 @@ extends Actor
 
 export var motorStrength: = 100
 export var weight = 100
+export var maxHP = 1000;
+export var maxBattery = 1000;
+export var dischargeRate = 0.0001
+
+var hp:float 
+var battery: float
 
 var isOpen = true
+var beingDamaged = false
+
+
+func _ready():
+	hp = maxHP
+	battery = maxBattery
 
 func _physics_process(delta: float) -> void:
 	
 	acceleration = get_acceleration()
 	velocity = update_velocity()
 	rotation = update_rotation() 
-
-	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, true)
+	
+	battery -= 0.1 +  dischargeRate * velocity.length()
+	
+	prints(hp,battery)
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
 	return
 
 func get_acceleration() -> Vector2:
@@ -37,3 +52,8 @@ func update_velocity() -> Vector2:
 func update_rotation() -> float:
 	return velocity.x/3000.0
 
+func _on_DamageArea_body_entered(body: Node) -> void:
+	hp -= 1 * velocity.length()
+
+func _on_DamageArea_body_exited(body: Node) -> void:
+	beingDamaged = false

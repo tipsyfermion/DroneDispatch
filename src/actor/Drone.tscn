@@ -61,10 +61,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 31, 9.93628 )
+extents = Vector2( 26.764, 6.76403 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 31, 10 )
+extents = Vector2( 27, 10 )
 
 [node name="Drone" type="KinematicBody2D"]
 collision_mask = 28
@@ -187,13 +187,14 @@ position = Vector2( 0.23597, -0.23597 )
 node_a = NodePath("..")
 node_b = NodePath("../Chain/Rod1")
 
-[node name="Damage Area" type="Area2D" parent="."]
-monitorable = false
+[node name="DamageArea" type="Area2D" parent="."]
 collision_mask = 28
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Damage Area"]
-position = Vector2( 0, -1 )
+[node name="DamageArea" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2( 0, -5 )
 shape = SubResource( 13 )
 
 [connection signal="body_shape_entered" from="Chain/Hook/Grabber" to="Chain/Hook/Grabber/PickRegion" method="_on_Grabber_body_shape_entered"]
 [connection signal="body_shape_exited" from="Chain/Hook/Grabber" to="Chain/Hook/Grabber/PickRegion" method="_on_Grabber_body_shape_exited"]
+[connection signal="body_entered" from="DamageArea" to="." method="_on_DamageArea_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_DamageArea_body_exited"]
