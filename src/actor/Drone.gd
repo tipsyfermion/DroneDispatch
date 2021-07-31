@@ -51,12 +51,16 @@ func _restart():
 func _physics_process(delta: float) -> void:	
 	if Input.is_action_just_pressed("restart"):
 		_restart()
+	if Input.is_action_just_pressed("pause"):
+		get_tree().change_scene("res://src/ui/screens/SettingsScreen.tscn")
 	acceleration = get_acceleration()
 	velocity = update_velocity()
 	rotation = update_rotation() 	
 	battery -= 0.1 +  dischargeRate * velocity.length()
-	if battery<0 or hp<0:
-		_restart()
+	if battery<0:
+		get_tree().change_scene("res://src/ui/screens/_B0Screen.tscn")
+	if hp<0:
+		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
 	update_values_bars()
 	# if package_delivered:
 	# 	update_packages_count()

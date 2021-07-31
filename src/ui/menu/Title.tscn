@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/5 UI/theme/font/font_title.tres" type="DynamicFont" id=1]
+
+[node name="Title" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -45.3127
+margin_top = 112.267
+margin_right = 53.6874
+margin_bottom = 126.267
+custom_fonts/font = ExtResource( 1 )
+text = "Drone Dispatch"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
