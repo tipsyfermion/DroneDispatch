@@ -216,8 +216,6 @@ script = ExtResource( 3 )
 [node name="Box" parent="." instance=ExtResource( 8 )]
 position = Vector2( 65.6708, 477.226 )
 input_pickable = true
-collision_layer = 8
-collision_mask = 31
 gravity_scale = 10.0
 
 [node name="Drone" parent="." instance=ExtResource( 2 )]

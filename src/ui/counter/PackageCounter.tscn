@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/5 UI/counter/label_bg.png" type="Texture" id=1]
+[ext_resource path="res://assets/3 Objects/Box8.png" type="Texture" id=2]
+[ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/5 UI/theme/default_theme.tres" type="Theme" id=4]
+
+[node name="PackageCounter" type="NinePatchRect"]
+margin_right = 112.0
+margin_bottom = 53.0
+texture = ExtResource( 1 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 9.82153
+margin_top = -15.4797
+margin_right = 38.8215
+margin_bottom = 19.5203
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -49.944
+margin_top = -24.324
+margin_right = -10.944
+margin_bottom = 20.676
+texture = ExtResource( 2 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}

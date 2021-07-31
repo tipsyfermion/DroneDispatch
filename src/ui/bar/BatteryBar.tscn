@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/ui/bar/Bar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/5 UI/bar/battery/label_B.png" type="Texture" id=3]
+[ext_resource path="res://assets/5 UI/bar/battery/bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/5 UI/bar/battery/fill.png" type="Texture" id=5]
+
+[node name="BatteryBar" instance=ExtResource( 1 )]
+margin_right = 412.0
+
+[node name="Counter" parent="." index="0"]
+margin_bottom = 40.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="Label" parent="Counter" index="0"]
+margin_left = -101.232
+margin_top = -16.2919
+margin_right = -13.2324
+margin_bottom = 18.7081
+text = "4/30"
+
+[node name="TextureRect" parent="Counter" index="1"]
+texture = ExtResource( 3 )
+
+[node name="TextureProgress" parent="." index="1"]
+margin_right = 412.0
+margin_bottom = 40.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 5 )

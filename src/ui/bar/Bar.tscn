@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/5 UI/theme/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/5 UI/bar/hp/fill.png" type="Texture" id=2]
+[ext_resource path="res://assets/5 UI/bar/hp/label_HP.png" type="Texture" id=3]
+[ext_resource path="res://assets/5 UI/counter/label_bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/5 UI/bar/hp/bg.png" type="Texture" id=5]
+[ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=6]
+
+[node name="Bar" type="HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Counter" type="NinePatchRect" parent="."]
+margin_right = 160.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 160, 53 )
+texture = ExtResource( 4 )
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Counter"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -106.0
+margin_top = -20.5
+margin_right = -13.0
+margin_bottom = 19.5
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "10/25"
+align = 2
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Counter"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -14.5
+margin_right = 53.0
+margin_bottom = 14.5
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 164.0
+margin_right = 560.0
+margin_bottom = 53.0
+value = 45.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 2 )
