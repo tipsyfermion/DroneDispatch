@@ -39,6 +39,10 @@ global="*res://src/global.gd"
 window/stretch/mode="viewport"
 <<<<<<<HEADwindow/size/always_on_top=true
 
+[global]
+
+icon=false
+
 [importer_defaults]
 
 texture={
