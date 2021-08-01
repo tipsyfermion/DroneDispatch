@@ -30,3 +30,7 @@ func _on_RestartButton_button_up():
 
 func _on_MainMenuBitton_button_up():
 	get_tree().change_scene(next_scene_path)
+
+
+func _on_BackButton_button_up():
+	get_tree().change_scene(global.last_scene_path)
