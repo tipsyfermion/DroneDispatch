@@ -8,6 +8,7 @@ extents = Vector2( 13.1105, 10.4283 )
 [node name="CardBoardBox" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 31
+gravity_scale = 10.0
 
 [node name="Box1" type="Sprite" parent="."]
 position = Vector2( -0.0880876, -0.656855 )

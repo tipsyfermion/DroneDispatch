@@ -6,6 +6,10 @@ export var maxHP = 1000;
 export var maxBattery = 500;
 export var dischargeRate = 0.05
 export var totalPackageCount = 4
+export var Camera_left = 0
+export var Camera_right = 1000000
+export var Camera_top = 10000000
+export var Camera_bottom = 100000
 
 export var last_scene_path: String
 var hp: float 
@@ -46,6 +50,12 @@ func _ready():
 	set_initials_values_bars()
 	set_intial_packages_count()
 	dropZone = get_node("../../DropZone")
+	var cam = get_node("Camera")
+	cam.limit_left = Camera_left
+	cam.limit_right = Camera_right
+	cam.limit_bottom = Camera_bottom
+	cam.limit_top = Camera_top
+	
 func _restart():
 	get_tree().reload_current_scene()
 	

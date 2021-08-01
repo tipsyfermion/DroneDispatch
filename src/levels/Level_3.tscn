@@ -186,6 +186,10 @@ motorStrength = 500
 weight = 500
 maxBattery = 10000
 dischargeRate = 0.001
+Camera_left = -550
+Camera_right = 2560
+Camera_top = -100
+Camera_bottom = 2375
 
 [node name="DropZone" type="Node2D" parent="."]
 script = ExtResource( 13 )

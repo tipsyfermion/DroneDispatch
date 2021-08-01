@@ -303,11 +303,6 @@ position = Vector2( 1044, -323 )
 scale = Vector2( 1.95137, 1.88089 )
 texture = ExtResource( 7 )
 
-[node name="scenery" type="Sprite" parent="Environment"]
-position = Vector2( 1033, -316 )
-scale = Vector2( 10.6775, 9.47311 )
-texture = ExtResource( 7 )
-
 [node name="mud" type="Sprite" parent="Environment"]
 position = Vector2( 1037.95, 915.693 )
 scale = Vector2( 22.2943, 3.66968 )
@@ -362,36 +357,6 @@ tile_data = PoolIntArray( -2621393, 1, 0, -524267, 1, 0, -524258, 1, 0, -524253,
 [node name="InteractableEngine" type="Node2D" parent="."]
 script = ExtResource( 9 )
 
-[node name="CardBoardBox2" parent="InteractableEngine" instance=ExtResource( 13 )]
-position = Vector2( 201, -8 )
-
-[node name="CardBoardBox3" parent="InteractableEngine" instance=ExtResource( 16 )]
-position = Vector2( 229, -17 )
-
-[node name="WoodBox2" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 18 )]
-position = Vector2( 505, -38 )
-
-[node name="CardBoardBox" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 13 )]
-position = Vector2( 533, -37 )
-
-[node name="CardBoardBox2" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 14 )]
-position = Vector2( 571, -29 )
-
-[node name="WoodBox3" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 17 )]
-position = Vector2( 600, -39 )
-
-[node name="CardBoardBox3" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 16 )]
-position = Vector2( 619, -71 )
-
-[node name="CardBoardBox4" parent="InteractableEngine/CardBoardBox3" instance=ExtResource( 16 )]
-position = Vector2( 631, -37 )
-
-[node name="CardBoardBox4" parent="InteractableEngine" instance=ExtResource( 14 )]
-position = Vector2( 185, -25 )
-
-[node name="CardBoardBox" parent="InteractableEngine" instance=ExtResource( 14 )]
-position = Vector2( 174, -8 )
-
 [node name="Drone" parent="InteractableEngine" instance=ExtResource( 2 )]
 position = Vector2( 305.514, -128.991 )
 drag = 0.01
@@ -399,6 +364,10 @@ motorStrength = 500
 weight = 500
 maxBattery = 1500
 dischargeRate = 0.001
+Camera_left = 50
+Camera_right = 3550
+Camera_top = -1000
+Camera_bottom = 1000
 
 [node name="Box4" parent="InteractableEngine" instance=ExtResource( 3 )]
 position = Vector2( 2691, 41 )
@@ -411,6 +380,44 @@ position = Vector2( 1268, 57 )
 
 [node name="Box3" parent="InteractableEngine" instance=ExtResource( 3 )]
 position = Vector2( 2179, -40 )
+
+[node name="Junk" type="Node2D" parent="InteractableEngine"]
+
+[node name="WoodBox2" parent="InteractableEngine/Junk" instance=ExtResource( 18 )]
+position = Vector2( 734, -55 )
+
+[node name="CardBoardBox5" parent="InteractableEngine/Junk" instance=ExtResource( 13 )]
+position = Vector2( 762, -54 )
+
+[node name="CardBoardBox6" parent="InteractableEngine/Junk" instance=ExtResource( 14 )]
+position = Vector2( 800, -46 )
+
+[node name="WoodBox3" parent="InteractableEngine/Junk" instance=ExtResource( 17 )]
+position = Vector2( 829, -56 )
+
+[node name="CardBoardBox7" parent="InteractableEngine/Junk" instance=ExtResource( 16 )]
+position = Vector2( 848, -88 )
+
+[node name="CardBoardBox8" parent="InteractableEngine/Junk" instance=ExtResource( 16 )]
+position = Vector2( 860, -54 )
+
+[node name="CardBoardBox2" parent="InteractableEngine/Junk" instance=ExtResource( 13 )]
+position = Vector2( 201, -8 )
+
+[node name="CardBoardBox3" parent="InteractableEngine/Junk" instance=ExtResource( 16 )]
+position = Vector2( 229, -17 )
+
+[node name="CardBoardBox4" parent="InteractableEngine/Junk" instance=ExtResource( 14 )]
+position = Vector2( 185, -25 )
+
+[node name="CardBoardBox" parent="InteractableEngine/Junk" instance=ExtResource( 14 )]
+position = Vector2( 174, -8 )
+
+[node name="CardBoardBox9" parent="InteractableEngine/Junk" instance=ExtResource( 13 )]
+position = Vector2( 2145, -150 )
+
+[node name="CardBoardBox10" parent="InteractableEngine/Junk" instance=ExtResource( 13 )]
+position = Vector2( 2175, -128 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
@@ -433,3 +440,30 @@ scale = Vector2( 1.20003, 1 )
 [node name="1" parent="DropZone" instance=ExtResource( 19 )]
 position = Vector2( 1057, 500 )
 scale = Vector2( 1.20003, 1 )
+
+[node name="WoodBox2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2188, -78 )
+
+[node name="CardBoardBox" parent="." instance=ExtResource( 16 )]
+position = Vector2( 2139, -83 )
+
+[node name="WoodBox3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2214, -121 )
+
+[node name="CardBoardBox2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2181, -158 )
+
+[node name="CardBoardBox3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2210, -146 )
+
+[node name="CardBoardBox4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2164, -188 )
+
+[node name="WoodBox4" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2234, -185 )
+
+[node name="WoodBox5" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2132, -193 )
+
+[node name="WoodBox6" parent="." instance=ExtResource( 18 )]
+position = Vector2( 2180, -218 )

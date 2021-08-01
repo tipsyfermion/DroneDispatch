@@ -170,7 +170,7 @@ position = Vector2( 10.764, 9.23596 )
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
 frames = SubResource( 11 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
@@ -180,6 +180,7 @@ shape = SubResource( 12 )
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 0.23597, 125.574 )
 current = true
+limit_smoothed = true
 smoothing_enabled = true
 
 [node name="PinDroneChain" type="PinJoint2D" parent="."]
