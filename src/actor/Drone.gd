@@ -13,6 +13,7 @@ var count: int
 
 var isOpen = true
 var beingDamaged = false
+var damageCooldown = 0
 
 var bars: Control
 var packages: Control
@@ -25,7 +26,6 @@ func set_initials_values_bars():
 	bars.get_node("BatteryBar/Counter/Label").text = ("%d" % battery)	
 func set_intial_packages_count():
 	get_node("../../InterfaceLayer/Interface/counter/PackageCounter/Label").text = ("%d" % totalPackageCount)
-	
 func update_values_bars():
 	bars = get_node("../../InterfaceLayer/Interface/bars")
 	bars.get_node("HPBar/TextureProgress").value = hp
@@ -38,14 +38,12 @@ func update_packages_count():
 	prints(packages.text)
 	count = int(packages.text) - 1
 	packages.text = ("%d" % count)
-		
-	
 func _ready():
 	hp = maxHP
 	battery = maxBattery
 	set_initials_values_bars()
 	set_intial_packages_count()
-	
+
 func _restart():
 	get_tree().reload_current_scene()
 	
@@ -54,14 +52,21 @@ func _physics_process(delta: float) -> void:
 		_restart()
 	if Input.is_action_just_pressed("pause"):
 		get_tree().change_scene("res://src/ui/screens/SettingsScreen.tscn")
+	
 	acceleration = get_acceleration()
 	velocity = update_velocity()
 	rotation = update_rotation() 	
 	battery -= 0.1 +  dischargeRate * velocity.length()
+	
+	if damageCooldown > 0:
+		damageCooldown -= delta
+	
 	if battery<0:
 		get_tree().change_scene("res://src/ui/screens/_B0Screen.tscn")
+	
 	if hp<0:
 		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
+	
 	update_values_bars()
 
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
@@ -91,7 +96,9 @@ func update_rotation() -> float:
 	return velocity.x/3000.0
 
 func _on_DamageArea_body_entered(body: Node) -> void:
-	hp -= 1 * velocity.length()
+	if damageCooldown <= 0:
+		hp -= 1* velocity.length()
+		damageCooldown = 1
 
 func _on_DamageArea_body_exited(body: Node) -> void:
 	beingDamaged = false

@@ -170,7 +170,7 @@ position = Vector2( 10.764, 9.23596 )
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
 frames = SubResource( 11 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
