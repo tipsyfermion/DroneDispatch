@@ -24,6 +24,10 @@ config/name="DroneDelivreryService"
 run/main_scene="res://src/ui/screens/MainScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://src/global.gd"
+
 [display]
 
 window/stretch/mode="viewport"
