@@ -487,6 +487,7 @@ position = Vector2( 305.514, -128.991 )
 drag = 0.01
 motorStrength = 500
 weight = 500
+maxBattery = 1500
 dischargeRate = 0.001
 Camera_left = 25
 Camera_right = 2775

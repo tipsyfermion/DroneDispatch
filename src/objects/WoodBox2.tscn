@@ -3,7 +3,7 @@
 [ext_resource path="res://assets/3 Objects/Box2.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.4088, 10.5007 )
+extents = Vector2( 4.37302, 4.70665 )
 
 [node name="WoodBox2" type="RigidBody2D"]
 collision_layer = 8
