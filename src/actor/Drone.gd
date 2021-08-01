@@ -45,6 +45,7 @@ func _ready():
 	battery = maxBattery
 	set_initials_values_bars()
 	set_intial_packages_count()
+	
 func _restart():
 	get_tree().reload_current_scene()
 	
@@ -58,9 +59,7 @@ func _physics_process(delta: float) -> void:
 	if battery<0 or hp<0:
 		_restart()
 	update_values_bars()
-	# if package_delivered:
-	# 	update_packages_count()
-	#prints(hp,battery)
+
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
 	return
 
