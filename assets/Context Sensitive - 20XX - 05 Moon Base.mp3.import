@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Context Sensitive - 20XX - 05 Moon Base.mp3-d5ad0679edd5a1915bf11036e04ff6d5.mp3str"
+
+[deps]
+
+source_file="res://assets/Context Sensitive - 20XX - 05 Moon Base.mp3"
+dest_files=[ "res://.import/Context Sensitive - 20XX - 05 Moon Base.mp3-d5ad0679edd5a1915bf11036e04ff6d5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
