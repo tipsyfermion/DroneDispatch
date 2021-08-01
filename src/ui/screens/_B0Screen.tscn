@@ -70,12 +70,9 @@ next_scene_path = "res://src/ui/screens/MainScreen.tscn"
 margin_top = 158.0
 margin_bottom = 233.0
 
-<<<<<<< HEAD
 [connection signal="button_up" from="Menu/RestartButton" to="Menu/RestartButton" method="_on_Restart_button_up"]
 [connection signal="button_up" from="Menu/MainMenuBitton" to="Menu/MainMenuBitton" method="_on_Main_button_up"]
 [connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_Quit_button_up"]
-=======
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
->>>>>>> ae71950d7f554415da81877d99d7e14897d6f59a

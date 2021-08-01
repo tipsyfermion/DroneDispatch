@@ -285,7 +285,6 @@ __meta__ = {
 layer = 128
 
 [node name="Interface" parent="InterfaceLayer" instance=ExtResource( 10 )]
-visible = false
 
 [node name="scenery" type="Sprite" parent="."]
 position = Vector2( 1881, -404 )
