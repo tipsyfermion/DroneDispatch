@@ -6,9 +6,8 @@
 [ext_resource path="res://assets/corridor-with-door-spaceship-cartoon-background-interior-room-sci-fi-spaceship-background-games-mobi.png" type="Texture" id=4]
 [ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=5]
 [ext_resource path="res://assets/5 UI/main-screen/settings.jpg" type="Texture" id=6]
+[ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://assets/Context Sensitive - 20XX - 01 Thermal.mp3" type="AudioStream" id=8]
-
-[sub_resource type="ImageTexture" id=1]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0
@@ -19,26 +18,44 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 512.001, 301.25 )
-scale = Vector2( 1.63578, 1.67367 )
+position = Vector2( 512, 300 )
+scale = Vector2( 1.63578, 1.68067 )
 texture = ExtResource( 4 )
 
-[node name="background" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -10.0
-theme = ExtResource( 5 )
-texture = SubResource( 1 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Title3" parent="." instance=ExtResource( 3 )]
+margin_left = 136.0
+margin_top = 201.0
+margin_right = 512.0
+margin_bottom = 438.0
+rect_pivot_offset = Vector2( 504, 44 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Controls:
+Arrows / WASD - Move
+Space Bar - Pick
+Esc / P - Pause
+R - Restart"
+
+[node name="Title2" parent="." instance=ExtResource( 3 )]
+margin_left = -190.0
+margin_top = 435.0
+margin_right = 186.0
+margin_bottom = 672.0
+rect_pivot_offset = Vector2( 504, 44 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "By
+- Debaditya
+- Keerthana
+- Himanshu"
 
 [node name="Title" parent="." instance=ExtResource( 3 )]
-margin_left = -190.11
-margin_top = 86.4504
-margin_right = -91.1102
-margin_bottom = 100.45
+margin_left = -190.0
+margin_top = 86.0
+margin_right = 183.0
+margin_bottom = 142.0
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
