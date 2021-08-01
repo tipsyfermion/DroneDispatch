@@ -374,7 +374,7 @@ weight = 500
 maxBattery = 1500
 dischargeRate = 0.001
 Camera_left = 50
-Camera_right = 3550
+Camera_right = 3750
 Camera_top = -1000
 Camera_bottom = 1000
 
