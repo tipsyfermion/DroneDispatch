@@ -7,6 +7,7 @@ export var maxBattery = 500;
 export var dischargeRate = 0.05
 export var totalPackageCount = 4
 
+export var last_scene_path: String
 var hp: float 
 var battery: float
 var count: int
@@ -62,9 +63,17 @@ func _physics_process(delta: float) -> void:
 		damageCooldown -= delta
 	
 	if battery<0:
+		last_scene_path = get_tree().get_current_scene().get_name()
+		prints("B0: " + last_scene_path)
+		global.last_scene_path = "res://src/levels/" + last_scene_path + ".tscn"
+		prints(global.last_scene_path)
 		get_tree().change_scene("res://src/ui/screens/_B0Screen.tscn")
 	
 	if hp<0:
+		last_scene_path = get_tree().get_current_scene().get_name()
+		#prints("HP0" + last_scene_path)
+		global.last_scene_path = "res://src/levels/" + last_scene_path + ".tscn"
+		#prints("HP0:" + global.last_scene_path)
 		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
 	
 	update_values_bars()
