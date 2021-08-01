@@ -11,10 +11,10 @@
 [ext_resource path="res://src/levels/InteractableEngine.gd" type="Script" id=9]
 [ext_resource path="res://src/ui/Interface.tscn" type="PackedScene" id=10]
 
-[sub_resource type="ConvexPolygonShape2D" id=24]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=2]
 0/name = "bricks.png 0"
 0/texture = ExtResource( 5 )
 0/tex_offset = Vector2( 0, 0 )
@@ -25,22 +25,22 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 24 )
+0/shape = SubResource( 1 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=25]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=4]
 0/name = "green_bricks.png 0"
 0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
@@ -51,14 +51,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 25 )
+0/shape = SubResource( 3 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -279,14 +279,14 @@ scale = Vector2( 1.95137, 1.88089 )
 texture = ExtResource( 7 )
 
 [node name="Red_brick" type="TileMap" parent="."]
-tile_set = SubResource( 4 )
+tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
 tile_data = PoolIntArray( -589775, 0, 0, -589774, 0, 0, 720924, 0, 0, 1048606, 0, 0, 1048610, 0, 0, 1048611, 0, 0, 1114150, 0, 0, 1769513, 0, 0, 1769514, 0, 0, 1769515, 0, 0, 1769516, 0, 0 )
 
 [node name="Green_brick" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
+tile_set = SubResource( 4 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -589777, 0, 0, -589776, 0, 0, 1048608, 0, 0, 1048609, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1769516, 0, 0, 1769517, 0, 0, 1769518, 0, 0, 1835052, 0, 0, 1835053, 0, 0, 1835054, 0, 0, 1900590, 0, 0 )

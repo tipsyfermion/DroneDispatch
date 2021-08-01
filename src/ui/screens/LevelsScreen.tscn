@@ -54,10 +54,11 @@ next_scene_path = "res://src/levels/Level_1.tscn"
 margin_top = 79.0
 margin_bottom = 154.0
 text = "Level 2"
+next_scene_path = "res://src/levels/Level_2.tscn"
 
 [node name="Level3Button" parent="LevelsMenu" instance=ExtResource( 2 )]
 margin_top = 158.0
-margin_bottom = 233.0
+margin_bottom = 234.0
 text = "Level 3"
 
 [node name="QuitButton" parent="." instance=ExtResource( 1 )]
