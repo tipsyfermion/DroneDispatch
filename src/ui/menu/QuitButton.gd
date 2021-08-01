@@ -6,7 +6,7 @@ func _on_Quit_button_up():
 
 
 func _on_button_up():
-	pass # Replace with function body.
+	get_tree().quit()
 
 
 func _on_QuitButton_button_up():
