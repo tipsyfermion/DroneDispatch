@@ -3,12 +3,8 @@ extends Button
 
 export(String, FILE) var next_scene_path: = ""
 
-
-
 func _on_button_up() -> void:
 	get_tree().change_scene(next_scene_path)
-
-
 
 func _on_Restart_button_up():
 	prints(global.last_scene_path)
@@ -34,3 +30,4 @@ func _on_MainMenuBitton_button_up():
 
 func _on_BackButton_button_up():
 	get_tree().change_scene(global.last_scene_path)
+

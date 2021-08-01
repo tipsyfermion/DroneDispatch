@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=1]
-[ext_resource path="res://src/ui/menu/ChangeSceneButton.gd" type="Script" id=2]
-[ext_resource path="res://src/ui/menu/QuitButton.gd" type="Script" id=3]
+[ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/5 UI/main-screen/background.png" type="Texture" id=4]
 [ext_resource path="res://src/ui/menu/QuitButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/ui/menu/ChangeSceneButton.tscn" type="PackedScene" id=6]
@@ -39,27 +38,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayAgainButton" type="Button" parent="Menu" instance=ExtResource( 6 )]
-margin_right = 261.0
+[node name="PlayAgainButton" parent="Menu" instance=ExtResource( 6 )]
 margin_bottom = 114.0
-size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
 text = "Play Again"
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 next_scene_path = "res://src/ui/screens/MainScreen.tscn"
 
-[node name="QuitButton" type="Button" parent="Menu" instance=ExtResource( 5 )]
+[node name="QuitButton" parent="Menu" instance=ExtResource( 5 )]
 margin_top = 118.0
-margin_right = 261.0
 margin_bottom = 233.0
-size_flags_vertical = 3
-text = "Quit"
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[connection signal="button_up" from="Menu/PlayAgainButton" to="Menu/PlayAgainButton" method="_on_button_up"]
-[connection signal="button_up" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_button_up"]
+custom_fonts/font = ExtResource( 2 )

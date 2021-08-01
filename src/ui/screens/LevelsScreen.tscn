@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/ui/menu/QuitButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/ui/menu/ChangeSceneButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/ui/menu/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=5]
 [ext_resource path="res://assets/5 UI/main-screen/background.png" type="Texture" id=7]
 
@@ -47,18 +48,21 @@ __meta__ = {
 
 [node name="Level1Button" parent="LevelsMenu" instance=ExtResource( 2 )]
 margin_bottom = 75.0
+custom_fonts/font = ExtResource( 4 )
 text = "Level 1"
 next_scene_path = "res://src/levels/Level_1.tscn"
 
 [node name="Level2Button" parent="LevelsMenu" instance=ExtResource( 2 )]
 margin_top = 79.0
 margin_bottom = 154.0
+custom_fonts/font = ExtResource( 4 )
 text = "Level 2"
 next_scene_path = "res://src/levels/Level_2.tscn"
 
 [node name="Level3Button" parent="LevelsMenu" instance=ExtResource( 2 )]
 margin_top = 158.0
 margin_bottom = 234.0
+custom_fonts/font = ExtResource( 4 )
 text = "Level 3"
 next_scene_path = "res://src/levels/Level_3.tscn"
 
@@ -71,13 +75,14 @@ margin_left = -286.198
 margin_top = -91.3789
 margin_right = -25.1984
 margin_bottom = -16.3789
+custom_fonts/font = ExtResource( 4 )
 
 [node name="BackButton" parent="." instance=ExtResource( 2 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 9.7818
-margin_top = -85.5822
-margin_right = 270.782
-margin_bottom = 29.4178
-rect_scale = Vector2( 0.891196, 0.66051 )
+margin_left = 34.1225
+margin_top = -91.0
+margin_right = 292.122
+margin_bottom = -14.0
+custom_fonts/font = ExtResource( 4 )
 text = "Back"

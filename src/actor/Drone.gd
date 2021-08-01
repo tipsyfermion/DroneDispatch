@@ -90,7 +90,8 @@ func _physics_process(delta: float) -> void:
 	
 	var i = dropZone.item_count
 	update_packages_count(i)
-		
+	if i == totalPackageCount:
+		get_tree().change_scene("res://src/ui/screens/LevelFinish.tscn")
 	update_values_bars()
 
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
