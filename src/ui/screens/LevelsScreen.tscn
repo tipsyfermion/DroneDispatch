@@ -60,6 +60,7 @@ next_scene_path = "res://src/levels/Level_2.tscn"
 margin_top = 158.0
 margin_bottom = 234.0
 text = "Level 3"
+next_scene_path = "res://src/levels/Level_3.tscn"
 
 [node name="QuitButton" parent="." instance=ExtResource( 1 )]
 anchor_left = 1.0
