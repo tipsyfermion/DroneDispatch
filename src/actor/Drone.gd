@@ -18,6 +18,7 @@ var damageCooldown = 0
 
 var bars: Control
 var packages: Control
+var dropZone: Node2D
 
 func set_initials_values_bars():
 	bars = get_node("../../InterfaceLayer/Interface/bars")
@@ -34,17 +35,17 @@ func update_values_bars():
 	bars.get_node("BatteryBar/TextureProgress").value = battery
 	if int(battery)%50==0:
 		bars.get_node("BatteryBar/Counter/Label").text = ("%d" % battery)
-func update_packages_count():
+func update_packages_count(i):
 	packages = get_node("../../InterfaceLayer/Interface/counter/PackageCounter/Label")
-	prints(packages.text)
-	count = int(packages.text) - 1
+	count = totalPackageCount - i
 	packages.text = ("%d" % count)
+	
 func _ready():
 	hp = maxHP
 	battery = maxBattery
 	set_initials_values_bars()
 	set_intial_packages_count()
-
+	dropZone = get_node("../../DropZone")
 func _restart():
 	get_tree().reload_current_scene()
 	
@@ -76,6 +77,9 @@ func _physics_process(delta: float) -> void:
 		#prints("HP0:" + global.last_scene_path)
 		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
 	
+	var i = dropZone.item_count
+	update_packages_count(i)
+		
 	update_values_bars()
 
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
