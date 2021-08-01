@@ -5,7 +5,7 @@ var hasBox = false
 func _on_DropZone_body_entered(body: Node) -> void:
 	if body.has_method("isBox"):
 		hasBox = true
-		print("Box Found!")
+	
 	pass # Replace with function body.
 
 

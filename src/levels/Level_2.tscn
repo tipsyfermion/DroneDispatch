@@ -8,15 +8,16 @@
 [ext_resource path="res://assets/1 Tiles/green_bricks.png" type="Texture" id=6]
 [ext_resource path="res://assets/1 Tiles/vacaroxa--generic-run-n-gun-pack--v.1.0/Assets_area_2/backgrounds/nuvens_2.png" type="Texture" id=7]
 [ext_resource path="res://assets/1 Tiles/vacaroxa--generic-run-n-gun-pack--v.1.0/Assets_area_2/backgrounds/nuvens_1.png" type="Texture" id=8]
-[ext_resource path="res://assets/1 Tiles/IndustrialTile_72.png" type="Texture" id=9]
+[ext_resource path="res://assets/1 Tiles/vacaroxa--generic-run-n-gun-pack--v.1.0/Assets_area_2/backgrounds/nuvens_3.png" type="Texture" id=9]
 [ext_resource path="res://src/ui/Interface.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/levels/InteractableEngine.gd" type="Script" id=11]
 [ext_resource path="res://src/objects/DropZone.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/levels/DropZone.gd" type="Script" id=13]
 [ext_resource path="res://src/ui/screens/UserInterfacePause.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assets/1 Tiles/IndustrialTile_78.png" type="Texture" id=15]
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 54.7378, 7 )
 
 [sub_resource type="TileSet" id=2]
 0/name = "tiles_out.png 0"
@@ -300,9 +301,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 46, 4 )
-
 [node name="Level_2" type="Node2D"]
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
@@ -317,11 +315,8 @@ layer = 3
 [node name="Interface" parent="InterfaceLayer" instance=ExtResource( 10 )]
 
 [node name="Back" type="Sprite" parent="."]
-position = Vector2( 1885, -438 )
+position = Vector2( 1892.27, -580.18 )
 scale = Vector2( 3.482, 3.05278 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="nuvens_10" type="Sprite" parent="Back"]
 position = Vector2( 241.024, -162.94 )
@@ -363,9 +358,14 @@ visible = false
 texture = ExtResource( 8 )
 
 [node name="nuvens_5" type="Sprite" parent="Back"]
-position = Vector2( 54.4888, 139.276 )
+position = Vector2( 57.6488, 161.415 )
 scale = Vector2( 0.941126, 1.08912 )
 texture = ExtResource( 7 )
+
+[node name="nuvens_4" type="Sprite" parent="Back"]
+position = Vector2( -98.297, 343.68 )
+scale = Vector2( 1.7261, 0.689496 )
+texture = ExtResource( 9 )
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -411,6 +411,9 @@ position = Vector2( 1568.75, 312.209 )
 [node name="Box5" parent="InteractableEngine" instance=ExtResource( 4 )]
 position = Vector2( 2389.44, 360.455 )
 
+[node name="Box" parent="InteractableEngine" instance=ExtResource( 4 )]
+position = Vector2( 2335.83, -70.7959 )
+
 [node name="Box6" parent="InteractableEngine" instance=ExtResource( 4 )]
 position = Vector2( 500.885, 319.625 )
 
@@ -419,8 +422,7 @@ position = Vector2( 305.514, -128.991 )
 drag = 0.01
 motorStrength = 500
 weight = 500
-maxHP = 1500
-maxBattery = 2500
+maxBattery = 1500
 dischargeRate = 0.001
 Camera_left = 25
 Camera_right = 2775
@@ -428,21 +430,18 @@ Camera_top = -800
 Camera_bottom = 850
 
 [node name="RigidBody2D" type="RigidBody2D" parent="InteractableEngine"]
-position = Vector2( 2109, 616 )
+position = Vector2( 2109, 600 )
 collision_layer = 8
 collision_mask = 31
-gravity_scale = 10.0
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="InteractableEngine/RigidBody2D"]
-position = Vector2( 1.00009, 6.49999 )
-scale = Vector2( 3.0625, 0.718748 )
-texture = ExtResource( 9 )
+position = Vector2( 0.876143, 5.9738 )
+scale = Vector2( 3.5032, 1.01341 )
+texture = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableEngine/RigidBody2D"]
-shape = SubResource( 9 )
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )
 
 [node name="DropZone" type="Node2D" parent="."]
 script = ExtResource( 13 )

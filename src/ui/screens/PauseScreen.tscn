@@ -43,7 +43,6 @@ __meta__ = {
 }
 
 [node name="Menu" type="VBoxContainer" parent="Pause"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
