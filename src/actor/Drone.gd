@@ -4,7 +4,7 @@ export var motorStrength: = 100
 export var weight = 100
 export var maxHP = 1000;
 export var maxBattery = 500;
-export var dischargeRate = 0.0005
+export var dischargeRate = 0.05
 export var totalPackageCount = 4
 
 var hp: float 
