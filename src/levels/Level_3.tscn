@@ -123,7 +123,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 54.7378, 7 )
 
-[node name="MainLevel" type="Node2D"]
+[node name="Level_3" type="Node2D"]
 scale = Vector2( 0.978847, 0.952997 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]

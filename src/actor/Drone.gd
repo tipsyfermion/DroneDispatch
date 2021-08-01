@@ -83,9 +83,9 @@ func _physics_process(delta: float) -> void:
 	
 	if hp<0:
 		last_scene_path = get_tree().get_current_scene().get_name()
-		#prints("HP0" + last_scene_path)
+		prints("HP0" + last_scene_path)
 		global.last_scene_path = "res://src/levels/" + last_scene_path + ".tscn"
-		#prints("HP0:" + global.last_scene_path)
+		prints("HP0:" + global.last_scene_path)
 		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
 	
 	var i = dropZone.item_count
