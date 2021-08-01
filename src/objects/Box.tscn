@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/3 Objects/Box8.png" type="Texture" id=1]
+[ext_resource path="res://src/objects/Box.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -8,6 +9,7 @@
 position = Vector2( 0.291741, 2.67874 )
 collision_layer = 8
 collision_mask = 31
+script = ExtResource( 2 )
 
 [node name="Box8" type="Sprite" parent="."]
 position = Vector2( -3.00008, 6.79418 )
