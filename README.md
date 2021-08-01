@@ -1,4 +1,4 @@
-# DroneDispatch
+# Drone Dispatch
 A 2D Game built on Godot.
 
 It is a futuristic game where factories can employ drones for deliveries. Take control of a drone and make deliveries at dedicated spots while keeping an eye on your health and battery levels. 
