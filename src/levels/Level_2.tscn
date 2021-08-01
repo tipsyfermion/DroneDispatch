@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://src/ui/screens/PauseScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/1 Tiles/vacaroxa--generic-run-n-gun-pack--v.1.0/Assets_area_2/tileset/tiles_out.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://assets/1 Tiles/vacaroxa--generic-run-n-gun-pack--v.1.0/Assets_area_2/backgrounds/nuvens_3.png" type="Texture" id=9]
 [ext_resource path="res://src/ui/Interface.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/levels/InteractableEngine.gd" type="Script" id=11]
+[ext_resource path="res://src/objects/DropZone.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/levels/DropZone.gd" type="Script" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -433,7 +435,7 @@ texture = ExtResource( 9 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 0
-collision_mask = 31
+collision_mask = 127
 format = 1
 tile_data = PoolIntArray( -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, -65508, 0, 0, -65501, 0, 0, -65500, 0, 0, -65499, 0, 0, -65498, 0, 0, -65497, 0, 0, -65496, 0, 0, -65495, 0, 0, -65494, 0, 0, -65493, 0, 0, -65492, 0, 0, -65491, 0, 0, -65490, 0, 0, -65421, 0, 0, -65420, 0, 0, -65419, 0, 0, -65418, 0, 0, -65417, 0, 0, -65416, 0, 0, -65415, 0, 0, -65414, 0, 0, -65413, 0, 0, -65412, 0, 0, -65411, 0, 0, -65410, 0, 0, -65409, 0, 0, -65408, 0, 0, -65407, 0, 0, -65406, 0, 0, -65405, 0, 0, -65404, 0, 0, -65403, 0, 0, -65402, 0, 0, -65401, 0, 0, -65400, 0, 0, -65399, 0, 0, -65398, 0, 0, -65397, 0, 0, -65396, 0, 0, -65395, 0, 0, -65394, 0, 0, -65393, 0, 0, -65392, 0, 0, -65391, 0, 0, -65390, 0, 0, -65389, 0, 0, -65388, 0, 0, -65387, 0, 0, -65386, 0, 0, -65385, 0, 0, -65384, 0, 0, -65383, 0, 0, -65382, 0, 0, -65381, 0, 0, -65380, 0, 0, -65379, 0, 0, -65378, 0, 0, -65377, 0, 0, -65376, 0, 0, -65375, 0, 0, -65374, 0, 0, -65373, 0, 0, -65372, 0, 0, -65371, 0, 0, -65370, 0, 0, -65369, 0, 0, -65368, 0, 0, -65367, 0, 0, -65366, 0, 0, 13, 1, 0, 15, 1, 0, 17, 1, 0, 19, 1, 0, 262228, 0, 0, 262229, 0, 0, 262230, 0, 0, 262231, 0, 0, 524356, 1, 0, 524358, 1, 0, 589903, 0, 0, 589904, 0, 0, 589905, 0, 0, 589906, 0, 0, 589907, 0, 0, 1376285, 0, 0, 1376286, 0, 0, 1376287, 0, 0, 1376288, 0, 0, 1376289, 0, 0, 1376290, 0, 0, 1376291, 0, 0, 1441885, 1, 0, 1441887, 1, 0, 1441889, 1, 0, 1441891, 1, 0, 1441893, 1, 0, 1572998, 1, 0, 1573000, 1, 0, 1573002, 1, 0, 1573004, 1, 0, 1573006, 1, 0, 1573008, 1, 0, 1573010, 1, 0, 1573012, 1, 0, 1573014, 1, 0, 1573016, 1, 0, 1573018, 1, 0, 1703940, 1, 0, 1703942, 1, 0, 1703944, 1, 0, 1703946, 1, 0, 2293764, 1, 0, 2293766, 1, 0, 2293768, 1, 0, 2293770, 1, 0, 2293772, 1, 0, 2359317, 0, 0, 2359318, 0, 0, 2359319, 0, 0, 2359320, 0, 0, 2359321, 0, 0, 2359322, 0, 0, 2359323, 0, 0, 2359324, 0, 0, 2359325, 0, 0 )
 
@@ -480,5 +482,24 @@ drag = 0.01
 motorStrength = 500
 weight = 500
 dischargeRate = 0.001
+
+[node name="DropZone" type="Node2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="1" parent="DropZone" instance=ExtResource( 12 )]
+position = Vector2( 1247.93, 582.292 )
+scale = Vector2( 2.13973, 2.82877 )
+
+[node name="2" parent="DropZone" instance=ExtResource( 12 )]
+position = Vector2( 841.12, 568.597 )
+scale = Vector2( 3.10717, 2.78877 )
+
+[node name="3" parent="DropZone" instance=ExtResource( 12 )]
+position = Vector2( 1235.49, 560.672 )
+scale = Vector2( 2.35592, -4.94494 )
+
+[node name="4" parent="DropZone" instance=ExtResource( 12 )]
+position = Vector2( 663.029, 550.855 )
+scale = Vector2( 1.58717, 4.22877 )
 
 [node name="PauseLayer" parent="." instance=ExtResource( 1 )]
