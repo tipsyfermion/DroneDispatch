@@ -318,6 +318,7 @@ position = Vector2( 305.514, -128.991 )
 drag = 0.01
 motorStrength = 500
 weight = 500
+dischargeRate = 0.001
 
 [node name="Box" parent="InteractableEngine" instance=ExtResource( 3 )]
 position = Vector2( 477.418, 337.472 )

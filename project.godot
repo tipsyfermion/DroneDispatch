@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="DroneDelivreryService"
-run/main_scene="res://src/actor/Drone.tscn"
+run/main_scene="res://src/ui/screens/MainScreen.tscn"
 config/icon="res://icon.png"
 
 [display]

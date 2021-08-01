@@ -4,7 +4,7 @@ export var motorStrength: = 100
 export var weight = 100
 export var maxHP = 1000;
 export var maxBattery = 500;
-export var dischargeRate = 0.0005
+export var dischargeRate = 0.05
 export var totalPackageCount = 4
 
 var hp: float 
@@ -52,12 +52,16 @@ func _restart():
 func _physics_process(delta: float) -> void:	
 	if Input.is_action_just_pressed("restart"):
 		_restart()
+	if Input.is_action_just_pressed("pause"):
+		get_tree().change_scene("res://src/ui/screens/SettingsScreen.tscn")
 	acceleration = get_acceleration()
 	velocity = update_velocity()
 	rotation = update_rotation() 	
 	battery -= 0.1 +  dischargeRate * velocity.length()
-	if battery<0 or hp<0:
-		_restart()
+	if battery<0:
+		get_tree().change_scene("res://src/ui/screens/_B0Screen.tscn")
+	if hp<0:
+		get_tree().change_scene("res://src/ui/screens/_HP0Screen.tscn")
 	update_values_bars()
 
 	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
