@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/5 UI/theme/font/default_font.tres" type="DynamicFont" id=2]
+=======
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=1]
+>>>>>>> 798187a2a2a705f28739541e91d4287ee70e4296
 [ext_resource path="res://assets/5 UI/main-screen/background.png" type="Texture" id=4]
 [ext_resource path="res://src/ui/menu/QuitButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/ui/menu/ChangeSceneButton.tscn" type="PackedScene" id=6]
@@ -40,11 +46,17 @@ __meta__ = {
 
 [node name="PlayAgainButton" parent="Menu" instance=ExtResource( 6 )]
 margin_bottom = 114.0
+<<<<<<< HEAD
 custom_fonts/font = ExtResource( 2 )
+=======
+>>>>>>> 798187a2a2a705f28739541e91d4287ee70e4296
 text = "Play Again"
 next_scene_path = "res://src/ui/screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 5 )]
 margin_top = 118.0
 margin_bottom = 233.0
+<<<<<<< HEAD
 custom_fonts/font = ExtResource( 2 )
+=======
+>>>>>>> 798187a2a2a705f28739541e91d4287ee70e4296

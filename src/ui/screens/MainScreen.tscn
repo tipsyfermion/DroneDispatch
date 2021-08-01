@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/ui/menu/ChangeSceneButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/ui/menu/QuitButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/ui/menu/Title.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/5 UI/main-screen/background.png" type="Texture" id=4]
+[ext_resource path="res://assets/corridor-with-door-spaceship-cartoon-background-interior-room-sci-fi-spaceship-background-games-mobi.png" type="Texture" id=4]
 [ext_resource path="res://assets/5 UI/theme/ui_theme.tres" type="Theme" id=5]
 [ext_resource path="res://assets/5 UI/main-screen/settings.jpg" type="Texture" id=6]
 [ext_resource path="res://src/ui/screens/PauseScreen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/Context Sensitive - 20XX - 01 Thermal.mp3" type="AudioStream" id=8]
+
+[sub_resource type="ImageTexture" id=1]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0
@@ -17,11 +19,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 516.5, 301.25 )
+scale = Vector2( 1.62141, 1.67367 )
+texture = ExtResource( 4 )
+
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 5 )
-texture = ExtResource( 4 )
+texture = SubResource( 1 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -32,6 +39,8 @@ margin_left = -190.11
 margin_top = 86.4504
 margin_right = -91.1102
 margin_bottom = 100.45
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -83,4 +92,5 @@ next_scene_path = "res://src/ui/screens/SettingsScreen.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -5.0
 autoplay = true

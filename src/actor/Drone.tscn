@@ -64,7 +64,7 @@ animations = [ {
 extents = Vector2( 26.764, 6.76403 )
 
 [sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 27, 10 )
+extents = Vector2( 28, 11 )
 
 [node name="Drone" type="KinematicBody2D"]
 collision_mask = 28
@@ -170,7 +170,7 @@ position = Vector2( 10.764, 9.23596 )
 position = Vector2( 0, -1 )
 scale = Vector2( 2.5802, 2.5802 )
 frames = SubResource( 11 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="DroneHitBox" type="CollisionShape2D" parent="."]
@@ -192,7 +192,7 @@ node_b = NodePath("../Chain/Rod1")
 collision_mask = 28
 
 [node name="DamageArea" type="CollisionShape2D" parent="DamageArea"]
-position = Vector2( 0, -5 )
+position = Vector2( 0, -3 )
 shape = SubResource( 13 )
 
 [connection signal="body_shape_entered" from="Chain/Hook/Grabber" to="Chain/Hook/Grabber/PickRegion" method="_on_Grabber_body_shape_entered"]

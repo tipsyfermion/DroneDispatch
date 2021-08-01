@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://assets/PSD/Tiles_sheet.png" type="Texture" id=1]
 [ext_resource path="res://src/actor/Drone.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://src/objects/Barrel.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/objects/DropZone.tscn" type="PackedScene" id=19]
 [ext_resource path="res://src/levels/DropZone.gd" type="Script" id=20]
+[ext_resource path="res://src/ui/screens/UserInterfacePause.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -285,8 +286,14 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 9
+
+[node name="UserInterfacePause" parent="UserInterface" instance=ExtResource( 21 )]
+pause_mode = 2
+
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
-layer = 128
+layer = 6
 
 [node name="Interface" parent="InterfaceLayer" instance=ExtResource( 10 )]
 
@@ -421,6 +428,7 @@ position = Vector2( 2175, -128 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
+volume_db = -5.0
 autoplay = true
 
 [node name="DropZone" type="Node2D" parent="."]
