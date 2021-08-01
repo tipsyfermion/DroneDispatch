@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/PSD/Tiles_sheet.png" type="Texture" id=1]
 [ext_resource path="res://src/actor/Drone.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/1 Tiles/mud.png" type="Texture" id=8]
 [ext_resource path="res://src/levels/InteractableEngine.gd" type="Script" id=9]
 [ext_resource path="res://src/ui/Interface.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/Context Sensitive - 20XX - 05 Moon Base.mp3" type="AudioStream" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -337,3 +338,7 @@ gravity_scale = 10.0
 [node name="Box3" parent="InteractableEngine" instance=ExtResource( 3 )]
 position = Vector2( 1057.57, 431.188 )
 gravity_scale = 10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
