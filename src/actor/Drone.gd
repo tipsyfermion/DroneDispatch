@@ -53,7 +53,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("restart"):
 		_restart()
 	if Input.is_action_just_pressed("pause"):
-		get_tree().change_scene("res://src/ui/screens/SettingsScreen.tscn")
+		last_scene_path = get_tree().get_current_scene().get_name()
+	#	get_tree().change_scene("res://src/ui/screens/SettingsScreen.tscn")
 	
 	acceleration = get_acceleration()
 	velocity = update_velocity()
