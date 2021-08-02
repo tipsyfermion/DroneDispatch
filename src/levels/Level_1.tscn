@@ -430,7 +430,7 @@ position = Vector2( 2175, -128 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
-volume_db = -5.0
+volume_db = -10.0
 autoplay = true
 
 [node name="DropZone" type="Node2D" parent="."]

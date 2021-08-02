@@ -65,6 +65,7 @@ custom_fonts/font = ExtResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -10.0
 autoplay = true
 
 [connection signal="button_up" from="Menu/RestartButton" to="Menu/RestartButton" method="_on_Restart_button_up"]

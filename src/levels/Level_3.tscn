@@ -268,4 +268,5 @@ position = Vector2( -58.4272, 0.652435 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
+volume_db = -10.0
 autoplay = true

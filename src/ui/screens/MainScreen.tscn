@@ -22,6 +22,21 @@ position = Vector2( 512, 300 )
 scale = Vector2( 1.63578, 1.68067 )
 texture = ExtResource( 4 )
 
+[node name="Title4" parent="." instance=ExtResource( 3 )]
+margin_left = -512.0
+margin_top = 201.0
+margin_right = -125.0
+margin_bottom = 438.0
+rect_pivot_offset = Vector2( 504, 44 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Instructions:
+Find the red boxes 
+and move deliver them
+to the green brick
+locations."
+
 [node name="Title3" parent="." instance=ExtResource( 3 )]
 margin_left = 136.0
 margin_top = 201.0
@@ -107,4 +122,5 @@ next_scene_path = "res://src/ui/screens/SettingsScreen.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -10.0
 autoplay = true
